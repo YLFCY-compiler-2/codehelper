@@ -52,7 +52,7 @@ position:relative;
 <title>插件:Codehelper|您的代码助理</title>
 <link rel="stylesheet" type="text/css" href="style-set.css">
 <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+<script defer src="https://pyscript.net/latest/pyscript.js"></script>
 </head>
 <body>
 <div id='start' class='start'>
@@ -67,11 +67,8 @@ position:relative;
 <p>在下方输入你想要呈现的效果，这里会自动为你写出代码。</p>
 <input type="text" name="要输入什么？" id='what'></div>
 <div class="output" id='test1'>
-<py-script>
-from js import text
-print('$test')
-
-</py-script>
+<py-repl>
+</py-repl>
 </div>
 
 <script>
