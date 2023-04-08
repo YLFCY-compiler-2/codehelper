@@ -1,0 +1,101 @@
+<html>
+<head>
+<style>
+.shader-0{
+text-align:center;
+float:none;
+}
+.loader {
+  margin: 6em auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 0.5em solid rgba(11, 11, 99, 0.2);
+  border-right: 0.5em solid rgba(11, 11, 99, 0.2);
+  border-bottom: 0.5em solid rgba(11, 11, 99, 0.2);
+  border-left: 0.5em solid #111199;
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.start{
+z-index:99;
+position:relative;
+}
+</style>
+<meta charset="utf-8">
+<title>插件:Codehelper|您的代码助理</title>
+<link rel="stylesheet" type="text/css" href="style-set.css">
+<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+<body>
+<div id='start' class='start'>
+<div class="shader-0">
+<div>
+<img src="zw.png" alt="" height=25%/><br>
+<img src="logo.svg" alt="插件的图标" height="100px" width="100px"/>
+<h2>Codehelper</h2><div class="loader"></div><p>加载中...</p>
+</div></div></div>
+<div class="search" id='test'>
+<h1>你需要什么样的效果？</h1>
+<p>在下方输入你想要呈现的效果，这里会自动为你写出代码。</p>
+<input type="text" name="要输入什么？" id='what'></div>
+<div class="output" id='test1'>
+<py-script>
+from js import text
+print('$test')
+
+</py-script>
+</div>
+
+<script>
+function sleep(duration) {
+  return new Promise(resolve => {
+      setTimeout(resolve, duration);
+  })
+}
+document.getElementById('test').style.display='none';
+document.getElementById('test1').style.display='none';
+async function main(){
+await sleep(5000);
+document.getElementById('start').style.display='none';
+document.getElementById('test').style.display='block';
+document.getElementById('test1').style.display='block';}
+
+main();
+
+</script>
+<script>
+var text="";
+window.setInterval(aaa, 1000);
+function aaa(){
+text=document.getElementById('what').value;
+}</script>
+</body>
+</html>
